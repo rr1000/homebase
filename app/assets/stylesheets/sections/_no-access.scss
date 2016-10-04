@@ -1,0 +1,22 @@
+.no-access{
+    max-width: 250px;
+    background: $c_light-gray;
+    padding: 20px;
+    border: 1px solid $c_border;
+    margin: 50px auto;
+    h1{
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $c_danger;
+        font-weight: 700;
+        margin: 0px 0px 20px 0px;
+    }
+    img{
+        width: 200px;
+        height: auto;
+        margin: 0px auto;
+        display: block;
+    }
+    @include border-radius(5px);
+}
