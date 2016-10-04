@@ -1,29 +1,32 @@
 <div class="grid">
-    <section class="auth-form">
-        <h2><i class="fa fa-sign-in"></i> Sign in</h2>
-        <article>
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-              <div class="field">
-                <%= f.label :email %>
-                <%= f.email_field :email, autofocus: true %>
-              </div>
-              <div class="field">
-                <%= f.label :password %>
-                <%= f.password_field :password, autocomplete: "off" %>
-              </div>
-              <% if devise_mapping.rememberable? -%>
-                <div class="field--checkbox">
-                  <%= f.check_box :remember_me %>
-                  <%= f.label :remember_me, class: 'checkbox-label'%>
+    <section class="auth-form-w450">
+        <div class="welcome">Welcome to Homebase! If you've received an invitation please sign in above. If you've not yet received an invitation, or it has expired please contact Ryan <a href="mailto:ryan@catalyze.io">ryan@catalyze.io</a></div>
+        <section class="auth-form">
+            <h2><i class="fa fa-sign-in"></i> Sign in</h2>
+            <article>
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <div class="field">
+                    <%= f.label :email %>
+                    <%= f.email_field :email, autofocus: true %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :password %>
+                    <%= f.password_field :password, autocomplete: "off" %>
+                  </div>
+                  <% if devise_mapping.rememberable? -%>
+                    <div class="field--checkbox">
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me, class: 'checkbox-label'%>
+                    </div>
+                  <% end -%>
+                  <div class="actions">
+                    <%= f.submit "Log in", class: 'btn' %>
+                  </div>
+                <% end %>
+                <div class="shared-links">
+                    <%= render "users/shared/links" %>
                 </div>
-              <% end -%>
-              <div class="actions">
-                <%= f.submit "Log in", class: 'btn' %>
-              </div>
-            <% end %>
-            <div class="shared-links">
-                <%= render "users/shared/links" %>
-            </div>
-        </article>
+            </article>
+        </section>
     </section>
 </div>

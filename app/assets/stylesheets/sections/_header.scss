@@ -17,15 +17,40 @@
         a{
             text-decoration: none;
             color: $c_black;
-            background-color: $c_light-gray;
-            border: 1px solid $c_border;
+            background-image: -webkit-linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
+            background-image: -o-linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
+            background-image: linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
+            box-shadow: inset 0px -1px 1px 0px #C0CBE4;
             padding: 5px 10px;
             @include border-radius(5px);
             @include easing(350ms);
             &:hover{
                 @include easing(350ms);
-                background-color: darken($c_light-gray, 10%);
-                border: 1px solid darken($c_border, 10%);
+                background-image: -webkit-linear-gradient(darken(#FFFFFF, 2%) 0%, darken(#F8F9FF, 2%) 100%);
+                background-image: -o-linear-gradient(darken(#FFFFFF, 2%) 0%, darken(#F8F9FF, 2%) 100%);
+                background-image: linear-gradient(darken(#FFFFFF, 2%) 0%, darken(#F8F9FF, 2%) 100%);
+                box-shadow: inset 0px -1px 1px 0px darken(#C0CBE4, 2%);
+            }
+        }
+        a.btn{
+            background-color: $c_black;
+            border: 1px solid $c_black;
+            color: $c_white;
+            margin: 0px 10px 0px 0px;
+        }
+        span{
+            @extend a;
+            border: 1px solid $c_border;
+            margin: 0px 10px 0px 0px;
+            background-image: -webkit-linear-gradient($c_light-gray 0%, $c_light-gray 100%);
+            background-image: -o-linear-gradient($c_light-gray 0%, $c_light-gray 100%);
+            background-image: linear-gradient($c_light-gray 0%, $c_light-gray 100%);
+            box-shadow: inset 0px 0px 0px 0px transparent;
+            &:hover{
+                background-image: -webkit-linear-gradient($c_light-gray 0%, $c_light-gray 100%);
+                background-image: -o-linear-gradient($c_light-gray 0%, $c_light-gray 100%);
+                background-image: linear-gradient($c_light-gray 0%, $c_light-gray 100%);
+                box-shadow: inset 0px 0px 0px 0px transparent;
             }
         }
     }

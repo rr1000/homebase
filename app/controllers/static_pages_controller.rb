@@ -1,7 +1,5 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
-
-  def about
-  end
+    before_filter :authenticate_user!
+    def schedule
+    end
 end
