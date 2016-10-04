@@ -6,7 +6,7 @@
     a.logo{
         display: block;
         float: left;
-        background: image-url('/logo.png');
+        background-image: asset-url("logo.png", image);
         width: 118px;
         height: 30px;
         background-size: 118px 30px;
