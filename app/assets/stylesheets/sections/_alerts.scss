@@ -9,5 +9,8 @@
         max-width: 550px;
         @include border-radius(5px);
     }
-    .alert-s{}
+    .alert-s{
+        @extend .notice-s;
+        color: $c_danger;
+    }
 }
