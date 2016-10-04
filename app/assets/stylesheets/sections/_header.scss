@@ -1,0 +1,41 @@
+.main-header{
+    background-color: $c_light-gray;
+    border-bottom: 1px solid $c_border;
+    padding: 20px;
+    @extend .cf;
+    a.logo{
+        display: block;
+        float: left;
+        background: url('logo.png');
+        width: 118px;
+        height: 30px;
+        background-size: 118px 30px;
+    }
+    nav{
+        float: right;
+        margin: 8px 0px 0px 0px;
+        a{
+            text-decoration: none;
+            color: $c_black;
+            background-color: $c_light-gray;
+            border: 1px solid $c_border;
+            padding: 5px 10px;
+            @include border-radius(5px);
+            @include easing(350ms);
+            &:hover{
+                @include easing(350ms);
+                background-color: darken($c_light-gray, 10%);
+                border: 1px solid darken($c_border, 10%);
+            }
+        }
+    }
+    .inline-notice{
+        font-size: 10px;
+        margin: 11px 0px 0px 10px;
+        display: inline-block;
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+        color: $c_brand;
+    }
+}

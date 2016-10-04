@@ -1,0 +1,72 @@
+.auth-form{
+    max-width: 450px;
+    margin: 50px auto;
+    border: 1px solid $c_border;
+    @include border-radius(5px);
+    h2{
+        padding: 10px;
+        border-bottom: 1px solid $c_border;
+        font-size: 14px;
+        font-weight: 700;
+        color: $c_black;
+    }
+    article{
+        padding: 10px;
+        .field{
+            margin: 0px 0px 10px 0px;
+            &--checkbox{
+                padding: 10px;
+                background-color: $c_light-gray;
+                border: 1px solid $c_border;
+                @include border-radius(5px);
+                margin: 0px 0px 10px 0px;
+            }
+        }
+        label{
+            display: block;
+            margin: 0px 0px 5px 0px;
+            padding: 0px;
+        }
+        input{
+            font-size: 14px;
+            width: 100%;
+            margin: 0px;
+            padding: 10px;
+            display: block;
+            border: 1px solid $c_border;
+            @include box-sizing(border-box);
+            @include border-radius(5px);
+        }
+        input[type="checkbox"]{
+            display: inline-block;
+            width: auto;
+        }
+        label.checkbox-label{
+            display: inline-block;
+        }
+        input.btn{
+            background-color: $c_brand;
+            color: $c_white;
+            border: 0px;
+            @include easing(350ms);
+            &:hover{
+                @include easing(350ms);
+                cursor: pointer;
+                background-color: darken($c_brand, 10%);
+            }
+        }
+    }
+}
+.shared-links{
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+    border: 1px solid $c_border;
+    @include border-radius(5px);
+    a{
+        display: block;
+        color: $c_brand;
+        text-decoration: none;
+        margin: 0px 0px 10px 0px;
+        &:last-of-type{margin: 0px;}
+    }
+}

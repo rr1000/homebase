@@ -1,0 +1,13 @@
+.alerts{
+    .notice-s{
+        background-color: $c_blue;
+        border: 1px solid $c_mid-blue;
+        color: $c_dark-blue;
+        padding: 20px;
+        margin: 20px auto;
+        text-align: center;
+        max-width: 550px;
+        @include border-radius(5px);
+    }
+    .alert-s{}
+}

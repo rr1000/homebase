@@ -1,0 +1,15 @@
+.welcome{
+    background: $c_green;
+    border: 1px solid $c_mid-green;
+    color: $c_dark-green;
+    @include border-radius(5px);
+    padding: 20px;
+    max-width: 450px;
+    margin: 50px auto;
+    line-height: 1.5;
+    a{
+        color: $c_dark-green;
+        text-decoration: none;
+        @include opacity(0.6);
+    }
+}

@@ -1,0 +1,14 @@
+<header class="main-header">
+    <div class="grid">
+        <a href="/" class="logo"></a>
+        <span class="inline-notice"><%= notice %></span>
+        <span class="inline-alert"><%= alert %></span>
+        <nav>
+            <% if user_signed_in? %>
+                <%= link_to "Log out", logout_path %>
+            <% else %>
+                <%= link_to "Sign in", sign_in_path %>
+            <% end %>
+        </nav>
+    </div>
+</header>
