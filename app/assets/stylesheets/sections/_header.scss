@@ -1,5 +1,5 @@
 .main-header{
-    background-color: $c_light-gray;
+    background-color: $c_white;
     border-bottom: 1px solid $c_border;
     padding: 20px;
     @extend .cf;
@@ -15,37 +15,56 @@
         float: right;
         margin: 8px 0px 0px 0px;
         a{
+            color: $c_brand;
             text-decoration: none;
-            color: $c_black;
-            background-image: -webkit-linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
-            background-image: -o-linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
-            background-image: linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
-            box-shadow: inset 0px -1px 1px 0px #C0CBE4;
+            margin: 0px 0px 0px 10px;
             padding: 5px 10px;
+            border: 1px solid $c_brand;
+            text-align: center;
             @include border-radius(5px);
             @include easing(350ms);
             &:hover{
                 @include easing(350ms);
-                background-image: -webkit-linear-gradient(darken(#FFFFFF, 2%) 0%, darken(#F8F9FF, 2%) 100%);
-                background-image: -o-linear-gradient(darken(#FFFFFF, 2%) 0%, darken(#F8F9FF, 2%) 100%);
-                background-image: linear-gradient(darken(#FFFFFF, 2%) 0%, darken(#F8F9FF, 2%) 100%);
-                box-shadow: inset 0px -1px 1px 0px darken(#C0CBE4, 2%);
+                background-color: $c_brand;
+                color: $c_white;
+            }
+        }
+        a.action{
+            text-decoration: none;
+            border: 0px;
+            color: $c_black;
+            background-image: -webkit-linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
+            background-image: -o-linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
+            background-image: linear-gradient(#FFFFFF 0%, #F8F9FF 100%);
+            padding: 5px 10px;
+            text-align: center;
+            margin: 0px 0px 0px 10px;
+            @include box-shadow-complex(0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08));
+            @include border-radius(5px);
+            @include easing(350ms);
+            &:hover{
+                @include easing(350ms);
+                @include box-shadow-complex(0 4px 6px rgba(50,50,93,.20),0 1px 3px rgba(0,0,0,.15));
+                border: 0px;
             }
         }
         a.btn{
             background-color: $c_black;
             border: 1px solid $c_black;
             color: $c_white;
-            margin: 0px 10px 0px 0px;
+            margin: 0px;
+            @include border-radius(5px);
         }
         span{
             @extend a;
             border: 1px solid $c_border;
-            margin: 0px 10px 0px 0px;
+            padding: 5px 10px;
             background-image: -webkit-linear-gradient($c_light-gray 0%, $c_light-gray 100%);
             background-image: -o-linear-gradient($c_light-gray 0%, $c_light-gray 100%);
             background-image: linear-gradient($c_light-gray 0%, $c_light-gray 100%);
             box-shadow: inset 0px 0px 0px 0px transparent;
+            color: $c_black;
+            @include border-radius(5px);
             &:hover{
                 background-image: -webkit-linear-gradient($c_light-gray 0%, $c_light-gray 100%);
                 background-image: -o-linear-gradient($c_light-gray 0%, $c_light-gray 100%);

@@ -1,6 +1,7 @@
 .auth-form{
     margin: 30px auto;
-    border: 1px solid $c_border;
+    background-color: $c_white;
+    @include box-shadow(0px 2px 4px 0px $c_blue-gray-shadow);
     @include border-radius(5px);
     h2{
         padding: 10px;

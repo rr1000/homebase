@@ -43,6 +43,11 @@
     -webkit-box-shadow: $s;
     box-shadow: $s;
 }
+@mixin box-shadow-complex($a, $b){
+    -moz-box-shadow: $a, $b;
+    -webkit-box-shadow: $a, $b;
+    box-shadow: $a, $b;
+}
 @mixin box-sizing($bs){
     box-sizing: $bs;
     -webkit-box-sizing: $bs;

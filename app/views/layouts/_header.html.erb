@@ -1,14 +1,15 @@
 <header class="main-header">
     <div class="grid">
         <a href="/" class="logo"></a>
-        <span class="inline-notice"><%= notice %></span>
-        <span class="inline-alert"><%= alert %></span>
         <nav>
             <% if user_signed_in? %>
-                <span class="user"><%= current_user.email %></span>
-                <%= link_to "Log out", logout_path %>
+                <!-- Fill in with photos link -->
+                <%= link_to "Photos! 🌅", "#" %>
+                <!-- Fill in with directory path -->
+                <%= link_to "Contact List", "#" %>
+                <%= link_to "Log out", logout_path, class: "action" %>
             <% else %>
-                <%= link_to "Sign in", sign_in_path %>
+                <%= link_to "Sign in", sign_in_path, class: "action" %>
             <% end %>
         </nav>
     </div>

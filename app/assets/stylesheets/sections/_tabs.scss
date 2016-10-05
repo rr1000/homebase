@@ -1,0 +1,28 @@
+.tab-nav{
+    font-size: 14px;
+    margin: 30px 0px;
+    .tab{
+        display: inline-block;
+        font-size: 14px;
+        padding: 5px 10px;
+        text-align: center;
+        width: 200px;
+        border: 1px solid $c_border;
+        background: $c_white;
+        margin: 0px 10px 0px 0px;
+        @include border-radius(5px);
+        @include easing(350ms);
+        &:hover{
+            @include easing(350ms);
+            cursor: pointer;
+            color: $c_white;
+            border: 1px solid $c_brand;
+            background-color: $c_brand;
+        }
+    }
+    .active{
+        background-color: $c_brand;
+        border: 1px solid $c_brand;
+        color: $c_white;
+    }
+}
