@@ -22,8 +22,6 @@
         @include border-radius(5px);
     }
     .events{
-        padding: 10px;
-        border: 1px solid $c_border;
         font-size: 12px;
         @include border-radius(5px);
         @extend .cf;
@@ -81,6 +79,43 @@
                 border-left: 1px solid #D0DBF7;
                 padding: 14px 0px 15px 35px;
             }
+        }
+        // Background images
+        .i-one{
+            background-image: image-url("one.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+            border: 1px solid #344e90;
+            color: $c_white;
+            .last{border: 0px;}
+            .length{border-left: 1px solid #344e90;}
+            .length{
+                background-color: rgba(255,255,255,0.5);
+                border-left: 1px solid #344e90;
+                border-right: 1px solid #344e90;
+                padding: 40px 0px 40px 30px;
+                color: $c_black;
+                font-weight: 700;
+            }
+            a.doc-button{
+                background-image: linear-gradient(-180deg, #FFFFFF 0%, #F4F4F4 100%);
+                border: 1px solid #344e90;
+                color: $c_black;
+                @include box-shadow(inset 0px -1px 1px 0px rgba(0,0,0,0.1));
+            }
+            @include box-shadow(inset 0px -1px 0px 0px darken(#344e90,5%));
+        }
+        .i-two{
+            @extend .i-one;
+            background-image: image-url("two.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .i-three{
+            @extend .i-one;
+            background-image: image-url("three.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
         }
     }
 }
