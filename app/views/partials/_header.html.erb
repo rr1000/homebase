@@ -4,6 +4,7 @@
         <div class="menu"><i class="fa fa-bars"></i></div>
         <nav>
             <% if user_signed_in? %>
+                <%= link_to "Info", info_path %>
                 <%= link_to "About", about_path %>
                 <%= link_to "Photos", "//drive.google.com/drive/folders/0B7Op43JOeN-5S3FFa1BjRUlRUXM", target: "_blank" %>
                 <%= link_to "Contact List", contact_path %>
