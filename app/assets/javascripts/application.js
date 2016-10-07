@@ -21,11 +21,11 @@ $("document").ready(function(){
     var close = $(".main-header .close");
 
     menu.click(function(){
-        nav.fadeToggle(250);
-        close.fadeToggle(250);
+        nav.show(250);
+        close.show(250);
     });
     close.click(function(){
-        nav.fadeToggle(250);
-        close.fadeToggle(250);
+        nav.hide(250);
+        close.hide(250);
     });
 });
