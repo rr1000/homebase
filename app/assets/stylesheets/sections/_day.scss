@@ -1,8 +1,10 @@
 .day{
     background-color: $c_white;
+    margin: 0px 0px 30px 0px;
     @include border-radius(5px);
     @include box-shadow(0px 2px 4px 0px $c_blue-gray-shadow);
     @extend .cf;
+    [class*='col-']{padding: 0px;}
     h1{
         font-size: 14px;
         font-weight: 700;
@@ -11,57 +13,40 @@
         padding: 10px;
     }
     .pad{padding: 10px;}
-    .announcement{
-        background-color: $c_green;
-        border: 1px solid $c_mid-green;
-        color: $c_dark-green;
-        padding: 10px;
-        max-width: 550px;
-        line-height: 1.2;
-        margin: 0px 0px 10px 0px;
-        @include border-radius(5px);
-    }
     .events{
         font-size: 12px;
-        @include border-radius(5px);
         @extend .cf;
         .event-one-hour{
             position: relative;
             @extend .cf;
             background-image: linear-gradient(-180deg, #FCFDFF 2%, #F1F5FF 100%);
-            border: 1px solid #D0DBF7;
+            border: 1px solid $c_border-alt;
             margin: 0px 0px 10px 0px;
-            @include box-shadow(inset 0px -1px 0px 0px darken(#D0DBF7,5%));
+            @include box-shadow(inset 0px -1px 0px 0px darken($c_border-alt,5%));
             @include border-radius(5px);
             &:last-of-type{margin: 0px;}
-            .info{padding: 30px 0px 0px 10px;font-weight: 700;}
-            .place{padding: 5px 0px 0px 10px;}
-            .length{
-                border-left: 1px solid #D0DBF7;
-                color: #96ABE1;
-                padding: 40px 0px 40px 35px;
-            }
+            .info{font-weight: 700;}
             a.doc-button{
-                display: block;
+                display: inline-block;
                 text-decoration: none;
                 background-image: linear-gradient(-180deg, #FFF8B9 0%, #FFE53E 100%);
                 border: 1px solid #BFAF53;
                 text-align: center;
                 color: #88802C;
-                padding: 5px 10px;
+                padding: 5px 5px;
+                margin: 10px 10px 0px 0px;
                 @include box-shadow(inset 0px -1px 1px 0px rgba(141,127,39,0.50));
                 @include border-radius(5px);
+                &:last-of-type{margin: 10px 0px 0px 0px;}
             }
-            .last{
-                border-left: 1px solid #D0DBF7;
-                padding: 34px 0px 35px 35px;
-            }
+            a.maps-button{@extend .doc-button;}
             .dot{
                 height: 10px;
                 width: 10px;
                 position: absolute;
                 top: 10px;
                 right: 10px;
+                z-index: 999;
                 background-color: $c_mid-green;
                 -webkit-animation: dotglow 2s infinite;
                 -moz-animation: dotglow 2s infinite;
@@ -69,16 +54,39 @@
                 animation: dotglow 2s infinite;
                 @include border-radius(5px);
             }
+            .left{
+                padding: 10px;
+                border-right: 1px solid $c_black;
+                min-height: 100px;
+                @include border-radius-left(5px);
+                .info{margin: 0px 0px 10px 0px;}
+                .place{
+                    padding: 5px;
+                    background-color: rgba(255,255,255,0.5);
+                    border: 1px solid $c_black;
+                    color: $c_black;
+                    display: inline-block;
+                    @include border-radius(5px);
+                }
+            }
+            .right{
+                @include border-radius-top-right(4px);
+                padding: 10px;
+                .sum{
+                    margin: 10px 0px 0px 0px;
+                    max-width: 350px;
+                    line-height: 1.5;
+                    a{text-decoration: none;color: $c_brand;}
+                }
+            }
         }
-        .open{background-image: linear-gradient(-180deg, transparent 2%, transparent 100%);}
+        .open{
+            background-image: linear-gradient(-180deg, transparent 2%, transparent 100%);
+            .left{border-right: 1px solid $c_border-alt;}
+        }
         .event-half-hour{
             @extend .event-one-hour;
-            .info{padding: 15px 0px 0px 10px;}
-            .length{padding: 20px 0px 20px 35px;}
-            .last{
-                border-left: 1px solid #D0DBF7;
-                padding: 14px 0px 15px 35px;
-            }
+            .left{border-right: 1px solid $c_border-alt;min-height: 75px;}
         }
         // Background images
         .i-one{
@@ -87,22 +95,14 @@
             background-size: cover;
             border: 1px solid #344e90;
             color: $c_white;
-            .last{border: 0px;}
-            .length{border-left: 1px solid #344e90;}
-            .length{
-                background-color: rgba(255,255,255,0.5);
-                border-left: 1px solid #344e90;
-                border-right: 1px solid #344e90;
-                padding: 40px 0px 40px 30px;
-                color: $c_black;
-                font-weight: 700;
-            }
+            .length{color: $c_black;}
             a.doc-button{
                 background-image: linear-gradient(-180deg, #FFFFFF 0%, #F4F4F4 100%);
                 border: 1px solid #344e90;
                 color: $c_black;
                 @include box-shadow(inset 0px -1px 1px 0px rgba(0,0,0,0.1));
             }
+            a.maps-button{@extend .doc-button;}
             @include box-shadow(inset 0px -1px 0px 0px darken(#344e90,5%));
         }
         .i-two{
@@ -114,6 +114,33 @@
         .i-three{
             @extend .i-one;
             background-image: image-url("three.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        // Food images
+        .f-one{
+            @extend .i-one;
+            background-image: image-url("f-one.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        // Focus Group
+        .focus-group{
+            .left{
+                border-right: 1px solid $c_border-alt;
+                background-color: #f4f4f4;
+                @include box-shadow(inset 0px -1px 0px 0px darken($c_border-alt,5%));
+                .option{
+                    color: #4A90E2;
+                    display: block;
+                    margin: 10px 0px 0px 0px;
+                }
+            }
+        }
+        // Evening images
+        .evening{
+            @extend .i-one;
+            background-image: image-url("e-one.jpg");
             background-position: 50% 50%;
             background-size: cover;
         }
