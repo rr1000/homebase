@@ -1,11 +1,13 @@
 <header class="main-header">
     <div class="grid">
         <a href="/" class="logo"></a>
+        <div class="menu"><i class="fa fa-bars"></i></div>
+        <div class="close"><i class="fa fa-close"></i></div>
         <nav>
             <% if user_signed_in? %>
                 <%= link_to "About", about_path %>
                 <%= link_to "Photos", "//drive.google.com/drive/folders/0B7Op43JOeN-5S3FFa1BjRUlRUXM", target: "_blank" %>
-                <%= link_to "Contact List", "#" %>
+                <%= link_to "Contact List", contact_path %>
                 <%= link_to "Log out", logout_path, class: "action" %>
             <% else %>
                 <%= link_to "Sign in", sign_in_path, class: "action" %>

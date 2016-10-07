@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     end
     get '/no-access', to: 'no_access#show'
     get '/about', to: 'static_pages#about'
-    get '/help', to: 'static_pages#help'
+    get '/contact', to: 'static_pages#contact'
     root 'static_pages#schedule'
 end
