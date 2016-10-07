@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    devise_for :users
+    devise_for :users, :controllers => { :registrations => 'registrations' }
     devise_scope :user do
         get '/logout', to: 'devise/sessions#destroy'
         get '/sign-in', to: 'devise/sessions#new'
