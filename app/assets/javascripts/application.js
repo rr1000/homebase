@@ -12,20 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
-$("document").ready(function(){
-    var menu = $(".main-header .menu");
-    var nav = $(".main-header nav");
-    var close = $(".main-header .close");
-
-    menu.click(function(){
-        nav.show(250);
-        close.show(250);
-    });
-    close.click(function(){
-        nav.hide(250);
-        close.hide(250);
-    });
+$('document').ready(function(){
+    // Mobile menu
+    var nav = $('.main-header nav');
+    var navIcon = $('.main-header .menu');
+    navIcon.click(function(){ nav.fadeToggle(350); });
 });
