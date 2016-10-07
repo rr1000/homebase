@@ -6,16 +6,34 @@
     @include border-radius(5px);
     @include box-shadow(0px 2px 4px 0px $c_blue-gray-shadow);
     @extend .cf;
+    a{text-decoration: none;color: $c_brand;}
     h1{
         font-size: 30px;
         text-align: center;
-        margin: 0px 0px 20px 0px;
+        margin: 0px 0px 10px 0px;
         font-weight: 300;
     }
+    strong{font-weight: 700; color: $c_black;}
     p{
         color: $c_gray;
-        line-height: 1.2;
+        line-height: 1.5;
         margin: 0px 0px 20px 0px;
         &:last-of-type{margin: 0px;}
+    }
+    .faq{
+        margin: 10px 0px 0px 0px;
+        border: 1px solid $c_border;
+        padding: 10px;
+        strong{font-weight: 700; color: $c_black;}
+        @include border-radius(5px);
+    }
+    ul{
+        list-style: circle;
+        padding: 0px 0px 0px 20px;
+        li{
+            color: $c_gray;
+            margin: 0px 0px 10px 0px;
+            line-height: 1.5;
+        }
     }
 }
