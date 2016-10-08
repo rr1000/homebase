@@ -16,6 +16,7 @@ gem 'devise_invitable', '~> 1.7.0'
 
 group :development, :test do
   gem 'byebug',  '9.0.0', platform: :mri
+  gem 'foreman'
 end
 
 group :development do

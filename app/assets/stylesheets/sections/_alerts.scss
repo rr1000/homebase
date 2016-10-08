@@ -14,3 +14,24 @@
         color: $c_danger;
     }
 }
+#error_explanation{
+    h2{
+        font-size: 14px;
+        padding: 0px;
+        margin: 0px 0px 10px 0px;
+        border: 0px;
+        color: $c_danger;
+    }
+    ul{
+        list-style: circle;
+        margin: 0px 0px 20px 0px;
+        padding: 10px 10px 10px 25px;
+        border: 1px solid $c_danger;
+        @include border-radius(5px);
+        li{
+            color: $c_danger;
+            margin: 0px 0px 10px 0px;
+            &:last-of-type{margin: 0px;}
+        }
+    }
+}

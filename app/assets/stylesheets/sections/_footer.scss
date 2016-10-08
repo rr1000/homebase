@@ -1,0 +1,13 @@
+.main-footer{
+    max-width: 350px;
+    margin: 0px auto;
+    p{
+        text-align: center;
+        color: $c_gray;
+        margin: 0px 0px 10px 0px;
+        line-height: 1.2;
+        &:last-of-type{margin: 0px;}
+    }
+    p.notice{font-size: 11px;color: $c_black;text-transform: uppercase;font-weight: 700;}
+    p.alert{@extend p.notice;color: $c_danger;}
+}
