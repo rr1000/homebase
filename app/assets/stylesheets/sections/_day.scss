@@ -69,6 +69,7 @@
                     @include border-radius(5px);
                 }
             }
+            .late{min-height: 150px;}
             .right{
                 @include border-radius-top-right(4px);
                 padding: 10px;
@@ -77,6 +78,32 @@
                     max-width: 350px;
                     line-height: 1.5;
                     a{text-decoration: none;color: $c_brand;}
+                }
+                .maps{
+                    display: block;
+                    margin: 10px 0px 0px 0px;
+                    padding: 10px;
+                    border: 1px solid $c_border-alt;
+                    @include border-radius(5px);
+                    @extend .cf;
+                    .icon{
+                        float: left;
+                        background-image: image-url("map.png");
+                        width: 30px;
+                        height: 30px;
+                        background-size: 30px 30px;
+                        border: 1px solid #a5b5df;
+                        @include box-shadow(0px 2px 4px 0px #b6c5ce);
+                        @include border-radius(30px);
+                    }
+                    span{
+                        display: block;
+                        float: left;
+                        text-decoration: none;
+                        color: $c_brand;
+                        font-weight: 700;
+                        margin: 10px;
+                    }
                 }
             }
         }
@@ -117,10 +144,62 @@
             background-position: 50% 50%;
             background-size: cover;
         }
+        .i-four{
+            @extend .i-one;
+            background-image: image-url("four.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .i-five{
+            @extend .i-one;
+            background-image: image-url("five.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .i-six{
+            @extend .i-one;
+            background-image: image-url("six.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .i-seven{
+            @extend .i-one;
+            background-image: image-url("seven.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .i-eight{
+            border: 1px solid #344e90;
+            color: $c_white;
+            .length{color: $c_black;}
+            a.doc-button{
+                background-image: linear-gradient(-180deg, #FFFFFF 0%, #F4F4F4 100%);
+                border: 1px solid #344e90;
+                color: $c_black;
+                @include box-shadow(inset 0px -1px 1px 0px rgba(0,0,0,0.1));
+            }
+            a.maps-button{@extend .doc-button;}
+            @include box-shadow(inset 0px -1px 0px 0px darken(#344e90,5%));
+            background-image: image-url("eight.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
         // Food images
         .f-one{
             @extend .i-one;
             background-image: image-url("f-one.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .f-two{
+            @extend .i-one;
+            background-image: image-url("f-two.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .f-three{
+            @extend .i-one;
+            background-image: image-url("f-three.jpg");
             background-position: 50% 50%;
             background-size: cover;
         }
@@ -141,6 +220,12 @@
         .evening{
             @extend .i-one;
             background-image: image-url("e-one.jpg");
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        .evening-one{
+            @extend .i-one;
+            background-image: image-url("e-two.jpg");
             background-position: 50% 50%;
             background-size: cover;
         }

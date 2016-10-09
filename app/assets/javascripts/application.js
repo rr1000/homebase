@@ -19,4 +19,46 @@ $('document').ready(function(){
     var nav = $('.main-header nav');
     var navIcon = $('.main-header .menu');
     navIcon.click(function(){ nav.fadeToggle(350); });
+
+    // Calendar tabs
+    $("#dayTwo").hide(0);
+    $("#dayThree").hide(0);
+    $("#dayFour").hide(0);
+
+    $("#dayOneTab").click(function(){
+        $(".active").removeClass("active");
+        $("#dayTwo").hide(0);
+        $("#dayThree").hide(0);
+        $("#dayFour").hide(0);
+        //
+        $("#dayOne").show(0);
+        $(this).addClass("active");
+    });
+    $("#dayTwoTab").click(function(){
+        $(".active").removeClass("active");
+        $("#dayOne").hide(0);
+        $("#dayThree").hide(0);
+        $("#dayFour").hide(0);
+        //
+        $("#dayTwo").show(0);
+        $(this).addClass("active");
+    });
+    $("#dayThreeTab").click(function(){
+        $(".active").removeClass("active");
+        $("#dayOne").hide(0);
+        $("#dayTwo").hide(0);
+        $("#dayFour").hide(0);
+        //
+        $("#dayThree").show(0);
+        $(this).addClass("active");
+    });
+    $("#dayFourTab").click(function(){
+        $(".active").removeClass("active");
+        $("#dayOne").hide(0);
+        $("#dayTwo").hide(0);
+        $("#dayThree").hide(0);
+        //
+        $("#dayFour").show(0);
+        $(this).addClass("active");
+    });
 });

@@ -1,12 +1,39 @@
 <div class="grid">
     <div class="tab-nav">
-        <div class="tab active">Monday 10-10</div>
+        <div id="dayOneTab" class="tab active">Monday 10-10</div>
+        <div id="dayTwoTab" class="tab">Tuesday 10-11</div>
+        <div id="dayThreeTab" class="tab">Wednesday 10-12</div>
+        <div id="dayFourTab" class="tab">Thursday 10-13</div>
     </div>
-    <section class="day">
+    <section class="day" id="dayOne">
         <h1>😊 Monday October 10th</h1>
         <div class="pad">
             <article class="events">
                 <%= render 'partials/events/day_one' %>
+            </article>
+        </div>
+    </section>
+    <section class="day" id="dayTwo">
+        <h1>😊 Tuesday October 11th</h1>
+        <div class="pad">
+            <article class="events">
+                <%= render 'partials/events/day_two' %>
+            </article>
+        </div>
+    </section>
+    <section class="day" id="dayThree">
+        <h1>😊 Wednesday October 12th</h1>
+        <div class="pad">
+            <article class="events">
+                <%= render 'partials/events/day_three' %>
+            </article>
+        </div>
+    </section>
+    <section class="day" id="dayFour">
+        <h1>😊 Thursday October 13th</h1>
+        <div class="pad">
+            <article class="events">
+                <%= render 'partials/events/day_four' %>
             </article>
         </div>
     </section>

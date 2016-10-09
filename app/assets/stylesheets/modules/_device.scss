@@ -2,6 +2,18 @@
     .day{margin: 0px 30px 30px 30px;}
     .tab-nav{margin: 30px 30px 30px 30px;}
 }
+@media all and (max-width: 999px){
+    .tab-nav{
+        .tab{
+            display: block;
+            width: auto;
+            padding: 10px 20px;
+            max-width: 350px;
+            margin: 0px auto 10px auto;
+            &:last-of-type{margin: 0px auto 0px auto;}
+        }
+    }
+}
 @media all and (max-width: 851px){
     .grid{
         width: 100%;
