@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: homebase_dev
   pool: 5
-  username: homebase_dev_user
+  username: ryanSrich
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: homebase_test
   pool: 5
-  username: homebase_dev_user
+  username: ryanSrich
   password:
 
 production:
@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: homebase_prod
   pool: 5
-  username: homebase_prod_user
+  username: ryanSrich
   password:
