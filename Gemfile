@@ -14,6 +14,7 @@ gem 'jbuilder',         '2.4.1'
 gem 'pg', '0.18.4'
 gem 'devise',           '~> 4.2'
 gem 'devise_invitable', '~> 1.7.0'
+gem 'listen',           '3.0.8'
 
 group :development, :test do
     gem 'byebug',  '9.0.0', platform: :mri
@@ -22,7 +23,6 @@ end
 
 group :development do
     gem 'web-console',           '3.1.1'
-    gem 'listen',                '3.0.8'
     gem 'spring',                '1.7.2'
     gem 'spring-watcher-listen', '2.0.0'
 end
