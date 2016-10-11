@@ -21,7 +21,7 @@ $('document').ready(function(){
     navIcon.click(function(){ nav.fadeToggle(350); });
 
     // Calendar tabs
-    $("#dayTwo").hide(0);
+    $("#dayOne").hide(0);
     $("#dayThree").hide(0);
     $("#dayFour").hide(0);
 
