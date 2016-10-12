@@ -22,7 +22,7 @@ $('document').ready(function(){
 
     // Calendar tabs
     $("#dayOne").hide(0);
-    $("#dayThree").hide(0);
+    $("#dayTwo").hide(0);
     $("#dayFour").hide(0);
 
     $("#dayOneTab").click(function(){
