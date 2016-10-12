@@ -71,36 +71,37 @@ Rails.application.configure do
 
     # Use default logging formatter so that PID and timestamp are not suppressed.
     config.log_formatter = ::Logger::Formatter.new
+    config.log_level = :debug
 
     # Use a different logger for distributed setups.
     # require 'syslog/logger'
     # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
     if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger = ActiveSupport::TaggedLogging.new(logger)
+        logger           = ActiveSupport::Logger.new(STDOUT)
+        logger.formatter = config.log_formatter
+        config.logger = ActiveSupport::TaggedLogging.new(logger)
     end
 
     # Do not dump schema after migrations.
     config.active_record.dump_schema_after_migration = false
 
-    # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+    config.action_mailer.default_url_options = { host: 'homebase.catalyzeapps.com' }
 
-    # Mail config
-    config.action_mailer.default_url_options = {:host => 'blooming-forest-18844.herokuapp.com'}
-    Rails.application.routes.default_url_options[:host] = 'blooming-forest-18844.herokuapp.com'
-    config.action_mailer.delivery_method = :smtp
+    # Actionmailer config
     config.action_mailer.perform_deliveries = true
-    config.action_mailer.raise_delivery_errors = false
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.default_options = { from: "ryan@catalyze.io" }
     config.action_mailer.default :charset => "utf-8"
+    config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-        address: "smtp.gmail.com",
+        address: "smtp.mailgun.org",
         port: 587,
-        domain: ENV["GMAIL_DOMAIN"],
-        user_name: ENV["GMAIL_USERNAME"],
-        password: ENV["GMAIL_PASSWORD"],
-        authentication: "plain",
+        domain: "catalyze.io",
+        user_name: ENV["USERNAME"],
+        password: ENV["PASSWORD"],
+        authentication: 'login',
         enable_starttls_auto: true
     }
+
 end
