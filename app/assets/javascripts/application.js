@@ -18,7 +18,11 @@ $('document').ready(function(){
     // Mobile menu
     var nav = $('.main-header nav');
     var navIcon = $('.main-header .menu');
-    navIcon.click(function(){ nav.fadeToggle(350); });
+    var actions = $('.main-header .header-actions');
+    navIcon.click(function(){
+        nav.fadeToggle(350);
+        actions.fadeToggle(350);
+    });
 
     // October 2016 All Hands is over!
     // Calendar tabs
