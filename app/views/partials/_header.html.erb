@@ -2,16 +2,19 @@
     <div class="grid">
         <a href="/" class="logo"></a>
         <div class="menu"><i class="fa fa-bars"></i></div>
+        <% if user_signed_in? %>
         <nav>
-            <% if user_signed_in? %>
-                <%= link_to "Info", info_path %>
-                <%= link_to "About", about_path %>
-                <%= link_to "Photos", "//drive.google.com/drive/folders/0B7Op43JOeN-5S3FFa1BjRUlRUXM", target: "_blank" %>
-                <%= link_to "Contact List", contact_path %>
-                <%= link_to "Log out", logout_path, class: "action" %>
-            <% else %>
-                <%= link_to "Sign in", sign_in_path, class: "action" %>
-            <% end %>
+            <%= link_to "About", about_path %>
+            <%= link_to "All Hands", all_hands_path %>
         </nav>
+        <div class="header-actions">
+            <%= link_to current_user.email, edit_user_registration_path, class: "username" %>
+            <%= link_to "Log out", logout_path, class: "action" %>
+        </div>
+        <% else %>
+        <div class="header-actions">
+            <%= link_to "Sign in", sign_in_path, class: "action" %>
+        </div>
+        <% end %>
     </div>
 </header>

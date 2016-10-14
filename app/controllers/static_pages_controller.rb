@@ -8,4 +8,6 @@ class StaticPagesController < ApplicationController
     end
     def info
     end
+    def all_hands
+    end
 end

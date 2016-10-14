@@ -6,6 +6,15 @@
     @include border-radius(5px);
     @include box-shadow(0px 2px 4px 0px $c_blue-gray-shadow);
     @extend .cf;
+    img{margin: 10px 0px 0px 0px; max-width: 100%;width: 100%;}
+    .date{
+        font-size: 12px;
+        font-weight: 500;
+        font-style: italic;
+        text-align: center;
+        margin: 0px 0px 10px 0px;
+        color: $c_gray
+    }
     a{text-decoration: none;color: $c_brand;}
     h1{
         font-size: 30px;
@@ -38,3 +47,30 @@
     }
 }
 .c{ul{margin: 20px 0px 0px 0px;}}
+.static-full{
+    @extend .static;
+    max-width: 100%;
+    width: auto;
+}
+.preso-links{
+    nav{
+        a{
+            display: block;
+            padding: 0px 0px 10px 0px;
+            border-bottom: 1px solid $c_border-alt;
+            margin: 10px 0px 0px 0px;
+            color: $c_brand;
+            text-decoration: none;
+            @include easing(350ms);
+            &:hover{
+                @include easing(350ms);
+                color: $c_black;
+                padding: 0px 0px 10px 5px;
+            }
+            &:last-of-type{
+                padding: 0px; border: 0px;
+                &:hover{padding: 0px 0px 0px 5px;}
+            }
+        }
+    }
+}

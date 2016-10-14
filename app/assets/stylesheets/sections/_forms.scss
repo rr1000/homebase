@@ -68,6 +68,20 @@
             margin: 0px 0px 10px 0px;
             color: lighten($c_black, 50%);
         }
+        button.btn-danger,
+        input.btn-danger,
+        a.btn-danger{
+            background-color: $c_danger;
+            color: $c_white;
+            border: 0px;
+            @include easing(350ms);
+            &:hover{
+                @include easing(350ms);
+                cursor: pointer;
+                background-color: darken($c_danger, 10%);
+            }
+        }
+
     }
 }
 .shared-links{
@@ -81,5 +95,16 @@
         text-decoration: none;
         margin: 0px 0px 10px 0px;
         &:last-of-type{margin: 0px;}
+    }
+}
+.danger-zone{
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+    border: 1px solid $c_danger;
+    @include border-radius(5px);
+    h3{
+        font-weight: 500;
+        color: $c_danger;
+        margin: 0px 0px 10px 0px;
     }
 }

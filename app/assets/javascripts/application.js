@@ -20,10 +20,8 @@ $('document').ready(function(){
     var navIcon = $('.main-header .menu');
     navIcon.click(function(){ nav.fadeToggle(350); });
 
+    // October 2016 All Hands is over!
     // Calendar tabs
-    $("#dayOne").hide(0);
-    $("#dayTwo").hide(0);
-    $("#dayFour").hide(0);
 
     $("#dayOneTab").click(function(){
         $(".active").removeClass("active");

@@ -1,40 +1,64 @@
-<div class="grid">
-    <div class="tab-nav">
-        <div id="dayOneTab" class="tab">Monday 10-10</div>
-        <div id="dayTwoTab" class="tab">Tuesday 10-11</div>
-        <div id="dayThreeTab" class="tab active">Wednesday 10-12</div>
-        <div id="dayFourTab" class="tab">Thursday 10-13</div>
+<div class="h">
+    <div class="grid grid-no-pad">
+        <div class="col-6-12 i">
+            <section class="static-full">
+                <h1>All Hands October 2016</h1>
+                <div class="date"><i class="fa fa-calendar-o"></i> October 10th - October 13th</div>
+                <p>Thanks to everyone that made this All Hands our best one yet! A big special thanks to Rochelle, Vikki, and Madeleine for putting in an amazing effort. I know the entire team enjoyed our activities, food and the super accommodating office space. Until next time.</p>
+                <%= image_tag "wrap.png" %>
+            </section>
+        </div>
+        <div class="col-6-12 ii">
+            <section class="static-full preso-links">
+                <h1>Presentations</h1>
+                <p>Huge props to everyone that presented. Below is a list of all presentations.</p>
+                <nav>
+                    <a href="#"><i class="fa fa-pie-chart"></i> Brandon: Security Awareness Training</a>
+                    <a href="#"><i class="fa fa-pie-chart"></i> Marcia: Speak like a PRO</a>
+                    <a href="#"><i class="fa fa-pie-chart"></i> Patrick: Stress is Sexy</a>
+                    <a href="#"><i class="fa fa-pie-chart"></i> Raj: All Hands Product Update</a>
+                    <a href="#"><i class="fa fa-pie-chart"></i> Allan: Content As A Service</a>
+                    <a href="#"><i class="fa fa-pie-chart"></i> Allan: Multiplayer Design</a>
+                </nav>
+            </section>
+        </div>
     </div>
-    <section class="day" id="dayOne">
-        <h1>😊 Monday October 10th</h1>
-        <div class="pad">
-            <article class="events">
-                <%= render 'partials/events/day_one' %>
-            </article>
+    <div class="grid grid-no-pad">
+        <div class="col-6-12 i">
+            <section class="day" id="dayOne">
+                <h1>😊 Monday October 10th</h1>
+                <div class="pad">
+                    <article class="events">
+                        <%= render 'partials/events/day_one' %>
+                    </article>
+                </div>
+            </section>
+            <section class="day" id="dayThree">
+                <h1>😊 Wednesday October 12th</h1>
+                <div class="pad">
+                    <article class="events">
+                        <%= render 'partials/events/day_three' %>
+                    </article>
+                </div>
+            </section>
         </div>
-    </section>
-    <section class="day" id="dayTwo">
-        <h1>😊 Tuesday October 11th</h1>
-        <div class="pad">
-            <article class="events">
-                <%= render 'partials/events/day_two' %>
-            </article>
+        <div class="col-6-12 ii">
+            <section class="day" id="dayTwo">
+                <h1>😊 Tuesday October 11th</h1>
+                <div class="pad">
+                    <article class="events">
+                        <%= render 'partials/events/day_two' %>
+                    </article>
+                </div>
+            </section>
+            <section class="day" id="dayFour">
+                <h1>😊 Thursday October 13th</h1>
+                <div class="pad">
+                    <article class="events">
+                        <%= render 'partials/events/day_four' %>
+                    </article>
+                </div>
+            </section>
         </div>
-    </section>
-    <section class="day" id="dayThree">
-        <h1>😊 Wednesday October 12th</h1>
-        <div class="pad">
-            <article class="events">
-                <%= render 'partials/events/day_three' %>
-            </article>
-        </div>
-    </section>
-    <section class="day" id="dayFour">
-        <h1>😊 Thursday October 13th</h1>
-        <div class="pad">
-            <article class="events">
-                <%= render 'partials/events/day_four' %>
-            </article>
-        </div>
-    </section>
+    </div>
 </div>
