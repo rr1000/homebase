@@ -3,10 +3,6 @@
         <a href="/" class="logo"></a>
         <div class="menu"><i class="fa fa-bars"></i></div>
         <% if user_signed_in? %>
-        <nav>
-            <%= link_to "About", about_path %>
-            <%= link_to "All Hands", all_hands_path %>
-        </nav>
         <div class="header-actions">
             <%= link_to current_user.email, edit_user_registration_path, class: "username" %>
             <%= link_to "Log out", logout_path, class: "action" %>

@@ -1,0 +1,17 @@
+table.table{
+  width: 100%;
+  thead{
+    background-color: $c_light-gray;
+  }
+  th{
+    font-weight: 700;
+  }
+  th,td{
+    padding: 1rem;
+    border: 1px solid $c_border;
+    text-align: left;
+  }
+  tbody{
+    background-color: $c_white;
+  }
+}

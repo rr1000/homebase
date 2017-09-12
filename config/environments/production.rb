@@ -98,7 +98,7 @@ Rails.application.configure do
     config.action_mailer.smtp_settings = {
         address: "smtp.mailgun.org",
         port: 587,
-        domain: "catalyze.io",
+        domain: "datica.com",
         user_name: ENV["USERNAME"],
         password: ENV["PASSWORD"],
         authentication: 'login',
