@@ -15,6 +15,7 @@ gem 'pg', '0.18.4'
 gem 'devise',           '~> 4.2'
 gem 'devise_invitable', '~> 1.7.0'
 gem 'listen',           '3.0.8'
+gem 'simple_form', '~> 3.2'
 
 group :development, :test do
     gem 'byebug',  '9.0.0', platform: :mri

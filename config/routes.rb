@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     get '/info', to: 'static_pages#info'
     get '/contact', to: 'static_pages#contact'
     root 'static_pages#schedule'
+    resources :patients
 end
