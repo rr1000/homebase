@@ -1,5 +1,5 @@
 .main-header{
-    background-color: $c_white;
+    background-color: #1f232f;
     @include box-shadow(0px 2px 10px 0px lighten($c_blue-gray-shadow, 10%));
     padding: 1.5rem;
     @extend .cf;
