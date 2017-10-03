@@ -49,8 +49,8 @@
         a.action{
             text-decoration: none;
             border: 0px;
-            color: $c_white;
-            background: $c_black-blue;
+            color: $c_black-blue;
+            background: $c_white;
             padding: 0.5rem 1rem;
             text-align: center;
             @include border-radius(5px);
@@ -64,8 +64,8 @@
         a.username{
             padding: 5px 10px;
             text-align: center;
-            border: 1px solid $c_brand;
-            color: $c_brand;
+            border: 1px solid rgba(255,255,255,0.65);
+            color: rgba(255,255,255,0.65);
             @include border-radius(5px);
         }
         a.btn{
